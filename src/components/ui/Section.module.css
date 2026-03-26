@@ -1,0 +1,26 @@
+.section {
+  padding: var(--section-padding);
+}
+
+.alternative {
+  background-color: var(--color-bg-secondary);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 12px;
+  }
+}

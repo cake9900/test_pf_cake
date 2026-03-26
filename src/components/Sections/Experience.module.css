@@ -1,0 +1,197 @@
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Заголовок ===== */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  display: inline-block;
+  color: var(--color-accent-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 700;
+}
+
+.accent {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Таймлайн ===== */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timelineItem.last {
+  padding-bottom: 0;
+}
+
+/* ===== Линия ===== */
+.timelineLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timelineItem.last .timelineLine {
+  bottom: auto;
+  height: 40px;
+}
+
+/* ===== Точка ===== */
+.timelineDot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-accent-primary);
+  border-radius: 50%;
+  color: var(--color-accent-primary);
+  z-index: 1;
+}
+
+/* ===== Карточка ===== */
+.timelineCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  transition: all var(--transition-base);
+}
+
+.timelineCard:hover {
+  border-color: var(--color-accent-primary);
+  transform: translateX(8px);
+}
+
+/* ===== Заголовок карточки ===== */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.company {
+  color: var(--color-accent-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.period {
+  padding: 6px 12px;
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ===== Описание ===== */
+.description {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.description li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.description li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-primary);
+}
+
+.description li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Технологии ===== */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  padding: 4px 10px;
+  background: var(--color-bg-tertiary);
+  color: var(--color-accent-light);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+/* ===== Медиа-запросы ===== */
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timelineDot {
+    left: -7px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timelineDot svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,12 @@
+# robots.txt для портфолио
+# Разрешаем индексацию всего сайта
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-username.github.io/sitemap.xml
+
+# Запрещаем сканирование служебных путей
+Disallow: /_next/
+Disallow: /api/
