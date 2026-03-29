@@ -13,6 +13,11 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
+
+  // Используем webpack вместо Turbopack
+  webpack: (config, { isServer }) => {
+    return config;
+  },
 }
 
 export default nextConfig;
