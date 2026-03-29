@@ -58,8 +58,14 @@ jobs:
 
       - name: Check output directory
         run: |
+          echo "=== Root directory ==="
+          ls -la
+          echo "=== Contents of .next ==="
+          ls -la .next 2>/dev/null || echo ".next not found"
           echo "=== Contents of ./out ==="
-          ls -la ./out || echo "Directory ./out does not exist!"
+          ls -la ./out 2>/dev/null || echo "./out not found"
+          echo "=== Contents of public ==="
+          ls -la public 2>/dev/null || echo "public not found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
