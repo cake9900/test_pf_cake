@@ -13,11 +13,6 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
-
-  // Отключаем телеметрию
-  experimental: {
-    instrumentationHook: false,
-  },
 }
 
 export default nextConfig;
